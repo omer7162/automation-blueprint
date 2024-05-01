@@ -86,21 +86,35 @@
         }
 
         #dynamicTextContainer {
-            border-right: 2px solid white;
-            animation: blink 0.7s step-end infinite;
             font-weight: bold;
             font-size: 2.7em;
             text-align: left;
             display: table;
-            white-space: nowrap;
+            word-wrap: break-word;
             min-height: 1em;
         }
+		#dynamicTextContainer::after {
+			content: '|';
+			font-weight: normal;
+			display: inline-block;
+			width: 2px;
+			line-height: 1em;
+			margin-left: 2px; /* Small space between the text and cursor */
+			animation: blink 0.7s step-end infinite;
+			position: absolute; /* Positioned absolutely to align correctly with the text */
+		}
+
+		@keyframes blink {
+			50% { 
+				visibility: hidden; /* Hide and show the cursor */
+			}
+		}
 
         #typingContainer {
             display: block;
             width: 100%;
             overflow: hidden;
-            white-space: nowrap;
+            white-space: normal;
             min-height: 3.7em;
             margin-bottom: 3em;
         }
