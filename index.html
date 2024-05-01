@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="icon" href="icon16.png" type="image/x-icon">
     <title>Automation Blueprint</title>
     <style>
         body, html {
@@ -25,7 +25,7 @@
         }
 
         #logo {
-            width: 50px;
+            width: 60px;
             height: auto;
             margin-right: 20px;
         }
@@ -106,10 +106,10 @@
         }
 
         #contentRight {
+			width: 40%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            border-radius: 15px;
             overflow: hidden;
         }
 
@@ -117,10 +117,11 @@
             width: 100%;
             height: auto;
             transition: transform 0.3s ease-in-out;
+			 border-radius: 18px;
         }
 
 button {
-    padding: 15px 25px; /* Comfortable padding */
+	padding: 15px 25px; /* Comfortable padding */
     background-color: #2948a1; /* Primary blue background */
     background-image: linear-gradient(145deg, #375acf 0%, #2948a1 100%); /* Smooth gradient */
     color: white;
@@ -130,7 +131,7 @@ button {
     border-radius: 15px; /* Rounded corners for modern look */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Soft shadow for depth */
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 24px;
     transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
     position: relative; /* Positioning for pseudo-elements */
 }
@@ -168,6 +169,12 @@ button:hover::after {
                 justify-content: space-around;
             }
         }
+		@media (max-width: 768px) {
+			#contentRight {
+				width: 85%; /* Set width to 85% for screens smaller than 768 pixels */
+			}
+		}
+
     </style>
 </head>
 <body>
