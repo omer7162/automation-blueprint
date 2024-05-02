@@ -255,5 +255,15 @@ button:hover::after {
             typeEffect();
         };
     </script>
+	<script>
+		var faviconURL = 'https://storage.googleapis.com/msgsndr/ZXXVt7ejL0ens9pxo3nE/media/6633bcefb1687ea4096cfa47.png'
+
+		var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+		link.type = 'image/x-icon';
+		link.rel = 'shortcut icon';
+		link.href = faviconURL
+		document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
 </body>
 </html>
